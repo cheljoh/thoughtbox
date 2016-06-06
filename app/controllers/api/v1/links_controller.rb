@@ -4,12 +4,8 @@ module Api
       respond_to :json
 
       def index
-        if current_user.links
-          links = current_user.links
-          respond_with links
-        else
-          respond_with "No links yet! Add some!"
-        end
+        links = Link.order('title ASC')
+        respond_with links
       end
 
       # def create
