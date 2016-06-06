@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.feature "UserLogsIn", type: feature do
+RSpec.feature "UserLogsInandOut", type: feature do
 
   user = User.create(email: "hi@example.com", password: "hello", password_confirmation: "hello")
 
@@ -12,5 +12,9 @@ RSpec.feature "UserLogsIn", type: feature do
     click_button "Login!"
 
     expect(page).to have_content("Check out these kewwwll linkkss")
+
+    click_on "Logout"
+
+    expect(page).to have_content("You have successfully logged out!")
   end
 end
