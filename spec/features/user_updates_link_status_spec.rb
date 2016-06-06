@@ -1,8 +1,9 @@
 require "rails_helper"
 
 RSpec.feature "UserUpdatesLinkStatus", type: feature do
+  include WaitForAjax
 
-  scenario "user updates link status" do
+  scenario "user updates link status", js: true do
     user = User.create(email: "hi@example.com", password: "hello", password_confirmation: "hello")
 
     visit "/"
@@ -16,9 +17,15 @@ RSpec.feature "UserUpdatesLinkStatus", type: feature do
     click_button "Submit"
 
     click_button "Mark as Read"
-    expect(page).to have_content("Link is Read!")
+
+    wait_for_ajax
+
+    expect(page).to have_content("Mark as Unread")
 
     click_button "Mark as Unread"
-    expect(page).to have_content("Link is Unread!")
+
+    wait_for_ajax
+
+    expect(page).to have_content("Mark as Read")
   end
 end
