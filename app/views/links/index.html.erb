@@ -2,12 +2,13 @@
 
 <div id="search-field">
   <form>
-    <h5>Search Ideas</h5><br>
+    <h4>Search Ideas</h4>
     <input type='text' id='filter' name='filter-input'>
   </form> <br>
 </div>
 
 <% if current_user %>
+  <h4>Create new link:</h4>
   <%= form_for (Link.new) do |f| %>
     <%= f.label :url %>
     <%= f.text_field :url %>
