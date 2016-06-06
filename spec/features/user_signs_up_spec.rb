@@ -16,7 +16,7 @@ RSpec.feature "UserSignsUp", type: feature do
   scenario "user must have unique email" do
     visit "/users/new"
 
-    fill_in "Email", with: "chelsea@example.com"
+    fill_in "Email", with: "cha@example.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Create Account"
@@ -25,7 +25,7 @@ RSpec.feature "UserSignsUp", type: feature do
 
     visit "/users/new"
 
-    fill_in "Email", with: "chelsea@example.com"
+    fill_in "Email", with: "cha@example.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Create Account"
@@ -36,7 +36,7 @@ RSpec.feature "UserSignsUp", type: feature do
   scenario "password and password confirmation must match" do
     visit "/users/new"
 
-    fill_in "Email", with: "chelsea@example.com"
+    fill_in "Email", with: "choooo@example.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "hello"
     click_button "Create Account"
@@ -45,7 +45,7 @@ RSpec.feature "UserSignsUp", type: feature do
 
     visit "/users/new"
 
-    fill_in "Email", with: "chelsea@example.com"
+    fill_in "Email", with: "choooo@example.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Create Account"

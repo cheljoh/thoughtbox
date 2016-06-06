@@ -5,7 +5,9 @@ RSpec.feature "UserLogsInandOut", type: feature do
   user = User.create(email: "hi@example.com", password: "hello", password_confirmation: "hello")
 
   scenario "user logs in" do
-    visit "/login"
+    visit "/"
+
+    # visit "/login"
 
     fill_in "Email", with: "hi@example.com"
     fill_in "Password", with: "hello"
@@ -16,5 +18,6 @@ RSpec.feature "UserLogsInandOut", type: feature do
     click_on "Logout"
 
     expect(page).to have_content("You have successfully logged out!")
+    expect(current_path).to eq("/login")
   end
 end
