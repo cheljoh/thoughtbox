@@ -8,19 +8,6 @@ module Api
         respond_with links
       end
 
-      # def create
-      #   idea = Idea.new(idea_params)
-      #   if idea.save
-      #     respond_with({idea: idea}, status: 201, location: api_v1_ideas_path(idea))
-      #   else
-      #     respond_with({ errors: idea.errors }, status: 422, location: api_v1_ideas_path)
-      #   end
-      # end
-      #
-      # def destroy
-      #   respond_with Idea.find(params[:id]).destroy
-      # end
-      #
       def update
         link = Link.update(params[:id], link_params)
         if link.save

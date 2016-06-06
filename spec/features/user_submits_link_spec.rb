@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "UserSubmitsLink", type: feature do
 
-  scenario "user submits link" do
+  scenario "user submits link", js: true do
     user = User.create(email: "hi@example.com", password: "hello", password_confirmation: "hello")
 
     visit "/"

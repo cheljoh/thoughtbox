@@ -1,8 +1,9 @@
-<h1>Check out these kewwwll linkkss</h1>
+
+<h2>Check out these kewwwll linkkss</h2>
 
 <div id="search-field">
   <form>
-    <h4>Search Ideas</h4>
+    <h4>Search Links</h4>
     <input type='text' id='filter' name='filter-input'>
   </form> <br>
 </div>
@@ -18,26 +19,7 @@
   <% end %> <br />
 <% end %>
 
-
-Your special links: <br />
-<% @links.each do |link| %>
-
-  <% if link.read %>
-    <% button_class = "unread-link" %>
-    <% message = "Mark as Unread" %>
-    <% color = "color:blue" %>
-  <% else %>
-    <% button_class = "read-link" %>
-    <% message = "Mark as Read" %>
-    <% color = "color:red" %>
-  <% end %>
-  <div>Title: <%= link.title %>:</div> <br />
-  <div id="url-<%= link.id %>" style="<%= color %>">URL: <%= link.url %></div> <br />
-  <!-- <button id='read-<%= link.id %>' class='<%= button_class %>'><%= message %></button> <br /> -->
-  <%= link_to "Edit Link!", edit_link_path(link) %> <br /><br /><br /><br />
-<% end %> <br /><br /><br /><br />
-
-ALL LINKS:
+<h4>Links</h4>
 
 <div class="all-links">
 
