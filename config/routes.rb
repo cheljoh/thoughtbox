@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/login', to: "sessions#new"
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
-  resources :links, only: [:create, :index]
+  resources :links, only: [:create, :index, :edit, :update]
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do

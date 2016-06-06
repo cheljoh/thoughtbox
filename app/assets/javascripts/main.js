@@ -25,6 +25,8 @@ function getLinks(){
   });
 }
 
+// "<a href='/links/" + link.id +  "/edit'>Edit!</a>"
+
 function unreadToRead(){
   var id = getId($(this).attr("id"));
   var link = { link: { read: true }};
@@ -36,6 +38,8 @@ function unreadToRead(){
     success: function(){
       $(".all-links").empty();
       getLinks();
+      // $("#read-" + id).text("Mark AS UNREAD");
+      // $("#url-" + id).css("color", "red");
     },
     error: function(){
       console.log("Something went wrong");
@@ -54,6 +58,8 @@ function readToUnread(){
     success: function(){
       $(".all-links").empty();
       getLinks();
+      // $("#read-" + id).text("Mark AS READ");
+      // $("#url-" + id).css("color", "blue");
     },
     error: function(){
       console.log("Something went wrong");
