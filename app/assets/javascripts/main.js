@@ -1,31 +1,38 @@
 $(document).ready(function(){
   getLinks();
+  searchField();
   $("body").on("click", "button.read-link", unreadToRead);
   $("body").on("click", "button.unread-link", readToUnread);
 });
 
 function getLinks(){
   var buttonReadContent = "";
+  var linkStyle = "";
+  var readOrUnread = "";
   $.getJSON('api/v1/links', function(links){
     $.each(links, function(index, link){
-      if (link.read){ //read is true
+      if (link.read){
         buttonReadContent = "<button id=read-" + link.id + " class='unread-link'> Mark as Unread </button>";
         linkStyle = "color:#0000FF";
+        readOrUnread = "Already perused it";
       }
-      else { //read is false
+      else {
         buttonReadContent = "<button id=read-" + link.id + " class='read-link'> Mark as Read </button>";
         linkStyle = "color:#FF0000";
+        readOrUnread = "Need to check it out";
       }
       $(".all-links").append(
-        "<p>Title: " + link.title + "</p><br>" +
-        "<p style=" + linkStyle + " id=url-" + link.id + ">Url: " + link.url + "</p><br>" +
-        buttonReadContent + "<br><br>"
+        "<div class=links>" +
+          "<div class=link-title>Title: " + link.title + "</div><br>" +
+          "<div class=link-url style=" + linkStyle + " id=url-" + link.id + ">Url: " + link.url + "</div><br>" +
+          "<div class=link-read>" + readOrUnread + "</div><br>" +
+          "<a href='/links/" + link.id +  "/edit' class=btn>Edit!</a> <br><br>" +
+          buttonReadContent + "<br><br>" +
+        "</div>"
       );
     });
   });
 }
-
-// "<a href='/links/" + link.id +  "/edit'>Edit!</a>"
 
 function unreadToRead(){
   var id = getId($(this).attr("id"));
@@ -38,8 +45,6 @@ function unreadToRead(){
     success: function(){
       $(".all-links").empty();
       getLinks();
-      // $("#read-" + id).text("Mark AS UNREAD");
-      // $("#url-" + id).css("color", "red");
     },
     error: function(){
       console.log("Something went wrong");
@@ -58,8 +63,6 @@ function readToUnread(){
     success: function(){
       $(".all-links").empty();
       getLinks();
-      // $("#read-" + id).text("Mark AS READ");
-      // $("#url-" + id).css("color", "blue");
     },
     error: function(){
       console.log("Something went wrong");

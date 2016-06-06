@@ -16,13 +16,13 @@ RSpec.feature "UserUpdatesLinkStatus", type: feature do
     fill_in "Title", with: "best site ever"
     click_button "Submit"
 
-    click_button "Mark as Read"
+    click_on "Mark as Read"
 
     wait_for_ajax
 
     expect(page).to have_content("Mark as Unread")
 
-    click_button "Mark as Unread"
+    click_on "Mark as Unread"
 
     wait_for_ajax
 
