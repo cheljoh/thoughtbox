@@ -1,1 +1,11 @@
 <h1>Check out these kewwwll linkkss</h1>
+
+<% if current_user %>
+  <%= form_for (Link.new) do |f| %>
+    <%= f.label "URL" %>
+    <%= f.text_field :url %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.submit "Submit" %>
+  <% end %>
+<% end %>
