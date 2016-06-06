@@ -22,13 +22,7 @@ function getLinks(){
         readOrUnread = "Need to check it out";
       }
       $(".all-links").append(
-        "<div class=links>" +
-          "<div class=link-title>Title: " + link.title + "</div><br>" +
-          "<div class=link-url style=" + linkStyle + " id=url-" + link.id + ">Url: " + link.url + "</div><br>" +
-          "<div class=link-read>" + readOrUnread + "</div><br>" +
-          "<a href='/links/" + link.id +  "/edit' class=btn>Edit!</a> <br><br>" +
-          buttonReadContent + "<br><br>" +
-        "</div>"
+        linkContent(link, readOrUnread, linkStyle, buttonReadContent)
       );
     });
   });
@@ -43,8 +37,7 @@ function unreadToRead(){
     dataType: "json",
     data: link,
     success: function(){
-      $(".all-links").empty();
-      getLinks();
+      reloadLinks();
     },
     error: function(){
       console.log("Something went wrong");
@@ -61,17 +54,10 @@ function readToUnread(){
     dataType: "json",
     data: link,
     success: function(){
-      $(".all-links").empty();
-      getLinks();
+      reloadLinks();
     },
     error: function(){
       console.log("Something went wrong");
     }
   });
-}
-
-function getId(id){
-  var getNumbers = /\d+/;
-  var cleanedId = (id.match(getNumbers))[0];
-  return cleanedId;
 }
