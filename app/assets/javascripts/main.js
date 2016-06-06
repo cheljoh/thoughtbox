@@ -19,7 +19,7 @@ function getLinks(){
       else { //read is false
         buttonReadContent = "<button id=read-" + link.id + " class='read-link'> Mark as Read </button>";
         linkStyle = "color:#FF0000";
-        readOrUnread = "Unread";
+        readOrUnread = "Need to check it out";
       }
       $(".all-links").append(
         "<div class=links>" +

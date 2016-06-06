@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-06T15:41:30-06:00">2016-06-06T15:41:30-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-06T16:13:31-06:00">2016-06-06T16:13:31-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.97
+         4.24
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>15</td>
         <td>14</td>
         <td>1</td>
-        <td>2.1</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>23.2</td>
+        <td>24.6</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>25</td>
         <td>24</td>
         <td>1</td>
-        <td>4.1</td>
+        <td>4.3</td>
       </tr>
       
       <tr>
@@ -97,7 +97,7 @@
         <td>15</td>
         <td>11</td>
         <td>4</td>
-        <td>2.7</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -153,7 +153,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.32
+         4.62
        </span>
     </span> hits/line)
   </h2>
@@ -195,7 +195,7 @@
         <td>15</td>
         <td>14</td>
         <td>1</td>
-        <td>2.1</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -205,7 +205,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>23.2</td>
+        <td>24.6</td>
       </tr>
       
       <tr>
@@ -215,7 +215,7 @@
         <td>25</td>
         <td>24</td>
         <td>1</td>
-        <td>4.1</td>
+        <td>4.3</td>
       </tr>
       
       <tr>
@@ -225,7 +225,7 @@
         <td>15</td>
         <td>11</td>
         <td>4</td>
-        <td>2.7</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -602,14 +602,14 @@
           <code class="ruby">      def index</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="7">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="7">
+          <span class="hits">8</span>
           
           <code class="ruby">        links = Link.order(&#39;title ASC&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="8">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">        respond_with links</code>
         </li>
@@ -854,8 +854,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="112" data-linenumber="6">
-          <span class="hits">112</span>
+        <li class="covered" data-hits="119" data-linenumber="6">
+          <span class="hits">119</span>
           
           <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
         </li>
@@ -914,14 +914,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="4">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="4">
+          <span class="hits">25</span>
           
           <code class="ruby">    if current_user.nil?</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="5">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
           
           <code class="ruby">      redirect_to login_path</code>
         </li>
@@ -932,14 +932,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="7">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="7">
+          <span class="hits">17</span>
           
           <code class="ruby">      if current_user.links</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="8">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="8">
+          <span class="hits">17</span>
           
           <code class="ruby">        @links = current_user.links</code>
         </li>
@@ -1208,14 +1208,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="4">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="4">
+          <span class="hits">8</span>
           
           <code class="ruby">    @user = User.find_by(email: params[:session][:email])</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="5">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
           
           <code class="ruby">    if @user.nil?</code>
         </li>
@@ -1232,20 +1232,20 @@
           <code class="ruby">      flash[:notice] = &quot;Please register&quot;</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="8">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">    elsif @user.authenticate(params[:session][:password])</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="9">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="9">
+          <span class="hits">8</span>
           
           <code class="ruby">      session[:user_id] = @user.id</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="10">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="10">
+          <span class="hits">8</span>
           
           <code class="ruby">      redirect_to root_path</code>
         </li>

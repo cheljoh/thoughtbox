@@ -5,7 +5,7 @@ function searchField(){
       var title = $(link).find(".link-title").text();
       var url = $(link).find(".link-url").text();
       var read = $(link).find(".link-read").text();
-      title.match(filter) || url.match(filter) || read.match(filter)? $(link).show() : $(link).hide()
+      title.match(filter) || url.match(filter) || read.match(filter) ? $(link).show() : $(link).hide()
     });
   })
   .keyup(function(){
