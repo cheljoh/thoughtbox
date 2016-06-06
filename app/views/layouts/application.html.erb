@@ -8,6 +8,8 @@
 </head>
 <body>
 
+  <li><%= link_to "Logout", logout_path, method: "delete"%></li>
+
   <% flash.each do |type, message| %>
     <div class="<%= type %>">
       <%= raw(message)%>
