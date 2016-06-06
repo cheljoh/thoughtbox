@@ -1,5 +1,12 @@
 <h1>Check out these kewwwll linkkss</h1>
 
+<div id="search-field">
+  <form>
+    <h5>Search Ideas</h5><br>
+    <input type='text' id='filter' name='filter-input'>
+  </form> <br>
+</div>
+
 <% if current_user %>
   <%= form_for (Link.new) do |f| %>
     <%= f.label :url %>
