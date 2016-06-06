@@ -9,25 +9,25 @@
         1,
         null,
         1,
-        1,
+        3,
         null,
         null,
         1,
-        1,
+        3,
+        null,
+        3,
+        2,
+        2,
         null,
         1,
         1,
-        1,
-        null,
-        0,
-        0,
         null,
         null,
         null,
         1,
         null,
         1,
-        1,
+        3,
         null,
         null
       ],
@@ -41,6 +41,7 @@
       "/Users/chelseajohnson/Documents/turing/4module/thoughtbox/app/models/user.rb": [
         1,
         1,
+        1,
         null
       ],
       "/Users/chelseajohnson/Documents/turing/4module/thoughtbox/app/controllers/links_controller.rb": [
@@ -52,6 +53,6 @@
         null
       ]
     },
-    "timestamp": 1465229411
+    "timestamp": 1465229925
   }
 }

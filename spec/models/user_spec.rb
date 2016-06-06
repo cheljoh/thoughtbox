@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "has a unique email" do
+    user1 = User.create(email: "hello@cool.com", password: "hello", password_confirmation: "hello")
+    expect(user1.valid?).to be true
+    user2 = User.create(email: "hello@cool.com", password: "hello", password_confirmation: "hello")
+    expect(user2.valid?).to be false
+  end
 end
