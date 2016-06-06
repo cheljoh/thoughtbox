@@ -2,10 +2,15 @@
 
 <% if current_user %>
   <%= form_for (Link.new) do |f| %>
-    <%= f.label "URL" %>
+    <%= f.label :url %>
     <%= f.text_field :url %>
     <%= f.label :title %>
     <%= f.text_field :title %>
     <%= f.submit "Submit" %>
   <% end %>
+<% end %>
+
+<% @links.each do |link| %>
+  <%= link.title %>
+  <%= link.url %>
 <% end %>

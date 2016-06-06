@@ -11,7 +11,7 @@ RSpec.feature "UserSubmitsLink", type: feature do
     fill_in "Password", with: "hello"
     click_button "Login!"
 
-    fill_in "URL", with: "google.com"
+    fill_in "Url", with: "google.com"
     fill_in "Title", with: "best site ever"
     click_button "Submit"
 
