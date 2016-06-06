@@ -21,20 +21,20 @@ module Api
       #   respond_with Idea.find(params[:id]).destroy
       # end
       #
-      # def update
-      #   idea = Idea.update(params[:id], idea_params)
-      #   if idea.save
-      #     respond_with({ idea: idea }, status: 200, location: api_v1_ideas_path(idea))
-      #   else
-      #     respond_with({ errors: idea.errors }, status: 422, location: api_v1_ideas_path)
-      #   end
-      # end
-      #
-      # private
-      #
-      # def link_params
-      #   params.require(:idea).permit(:body, :title, :quality)
-      # end
+      def update
+        link = Link.update(params[:id], link_params)
+        if link.save
+          respond_with({ link: link }, status: 200, location: api_v1_links_path(link))
+        else
+          respond_with({ errors: link.errors }, status: 422, location: api_v1_links_path)
+        end
+      end
+
+      private
+
+      def link_params
+        params.require(:link).permit(:title, :url, :read)
+      end
     end
   end
 end

@@ -76,15 +76,15 @@ RSpec.describe "IdeaEndpointsSpec", type: :request do
   #   expect(Idea.count).to eq(4)
   # end
   #
-  # it "can change quality of an idea" do
-  #   make_ideas
-  #
-  #   expect(Idea.first.quality).to eq("swill")
-  #
-  #   put "/api/v1/ideas/#{Idea.first.id}", {idea: {quality: "plausible"}}
-  #
-  #   expect(Idea.first.quality).to eq("plausible")
-  # end
+  it "can change unread to read" do
+    link = Link.create(title: "hey", url: "http://google.com")
+
+    expect(Link.first.read).to eq(false)
+
+    put "/api/v1/links/#{Link.first.id}", {link: {read: true}}
+
+    expect(Link.first.read).to eq(true)
+  end
   #
   # it "can edit an idea" do
   #   make_ideas
