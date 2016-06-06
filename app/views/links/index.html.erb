@@ -12,7 +12,7 @@
 
 
 Your special links: <br />
-<!-- <% @links.each do |link| %>
+<% @links.each do |link| %>
 
   <% if link.read %>
     <% button_class = "unread-link" %>
@@ -25,11 +25,11 @@ Your special links: <br />
   <% end %>
   <div>Title: <%= link.title %>:</div> <br />
   <div id="url-<%= link.id %>" style="<%= color %>">URL: <%= link.url %></div> <br />
-  <button id='read-<%= link.id %>' class='<%= button_class %>'><%= message %></button> <br />
-  <button><%= link_to "Edit Link!", "#" %></button> <br /><br /><br /><br />
-<% end %> <br /> -->
+  <!-- <button id='read-<%= link.id %>' class='<%= button_class %>'><%= message %></button> <br /> -->
+  <%= link_to "Edit Link!", edit_link_path(link) %> <br /><br /><br /><br />
+<% end %> <br /><br /><br /><br />
 
-All Links:
+ALL LINKS:
 
 <div class="all-links">
 

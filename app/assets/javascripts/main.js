@@ -19,12 +19,13 @@ function getLinks(){
       $(".all-links").append(
         "<p>Title: " + link.title + "</p><br>" +
         "<p style=" + linkStyle + " id=url-" + link.id + ">Url: " + link.url + "</p><br>" +
-        buttonReadContent + "<br><br>" +
-        "<a href='/links/" + link.id +  "/edit'>Edit!</a>"
+        buttonReadContent + "<br><br>"
       );
     });
   });
 }
+
+// "<a href='/links/" + link.id +  "/edit'>Edit!</a>"
 
 function unreadToRead(){
   var id = getId($(this).attr("id"));

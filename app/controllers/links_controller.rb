@@ -28,11 +28,12 @@ class LinksController < ApplicationController
   end
 
   def update
-    link = Link.find(params[:id])
-    if link.update(link_params)
+    @link = Link.find(params[:id])
+    if @link.update(link_params)
       redirect_to root_path
     else
       flash[:notice] = "Your link is not valid, please try again"
+      render :edit
     end
   end
 
