@@ -2,10 +2,8 @@ require "rails_helper"
 
 RSpec.feature "UserLogsInandOut", type: feature do
 
-  user = User.create(email: "hi@example.com", password: "hello", password_confirmation: "hello")
-
   scenario "user logs in and out" do
-    pending
+    user = User.create(email: "hi@example.com", password: "hello", password_confirmation: "hello")
     visit "/"
 
     fill_in "Email", with: "hi@example.com"

@@ -1,1 +1,16 @@
 <h1>Check out these kewwwll linkkss</h1>
+
+<% if current_user %>
+  <%= form_for (Link.new) do |f| %>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.submit "Submit" %>
+  <% end %> <br />
+<% end %>
+
+<% @links.each do |link| %>
+  <%= link.title %>:
+  <%= link.url %> <br />
+<% end %>
