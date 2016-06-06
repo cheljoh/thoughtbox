@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-06T12:01:52-06:00">2016-06-06T12:01:52-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-06T12:07:55-06:00">2016-06-06T12:07:55-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.96
+         4.05
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>12.0</td>
+        <td>17.2</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>15</td>
         <td>15</td>
         <td>0</td>
-        <td>2.9</td>
+        <td>4.6</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>15</td>
         <td>11</td>
         <td>4</td>
-        <td>1.4</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -133,7 +133,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.33
+         4.62
        </span>
     </span> hits/line)
   </h2>
@@ -165,7 +165,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>12.0</td>
+        <td>17.2</td>
       </tr>
       
       <tr>
@@ -175,7 +175,7 @@
         <td>15</td>
         <td>15</td>
         <td>0</td>
-        <td>2.9</td>
+        <td>4.6</td>
       </tr>
       
       <tr>
@@ -185,7 +185,7 @@
         <td>15</td>
         <td>11</td>
         <td>4</td>
-        <td>1.4</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -472,8 +472,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="56" data-linenumber="6">
-          <span class="hits">56</span>
+        <li class="covered" data-hits="82" data-linenumber="6">
+          <span class="hits">82</span>
           
           <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
         </li>
@@ -532,14 +532,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="4">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="4">
+          <span class="hits">17</span>
           
           <code class="ruby">    if current_user.nil?</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">      redirect_to login_path</code>
         </li>
@@ -550,14 +550,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="7">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="7">
+          <span class="hits">12</span>
           
           <code class="ruby">      if current_user.links</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="8">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="8">
+          <span class="hits">12</span>
           
           <code class="ruby">        @links = current_user.links</code>
         </li>
@@ -592,20 +592,20 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="14">
+          <span class="hits">4</span>
           
           <code class="ruby">    @link = current_user.links.create(link_params)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="15">
+          <span class="hits">4</span>
           
           <code class="ruby">    if @link.save</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
           
           <code class="ruby">      redirect_to root_path</code>
         </li>
@@ -616,14 +616,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
           
           <code class="ruby">      flash[:notice] = &quot;Your link is not valid, please try again&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
           <code class="ruby">      redirect_to root_path</code>
         </li>
@@ -664,8 +664,8 @@
           <code class="ruby">  def link_params</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="26">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="26">
+          <span class="hits">4</span>
           
           <code class="ruby">    params.require(:link).permit(:url, :title)</code>
         </li>
@@ -724,14 +724,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="4">
+          <span class="hits">5</span>
           
           <code class="ruby">    @user = User.find_by(email: params[:session][:email])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">    if @user.nil?</code>
         </li>
@@ -748,20 +748,20 @@
           <code class="ruby">      flash[:notice] = &quot;Please register&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">    elsif @user.authenticate(params[:session][:password])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
           
           <code class="ruby">      session[:user_id] = @user.id</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="10">
+          <span class="hits">5</span>
           
           <code class="ruby">      redirect_to root_path</code>
         </li>

@@ -3,10 +3,10 @@ class LinksController < ApplicationController
   def index
     if current_user.nil?
       redirect_to login_path
-    else
-      if current_user.links
-        @links = current_user.links
-      end
+    # else
+    #   if current_user.links
+    #     @links = current_user.links
+    #   end
     end
   end
 
